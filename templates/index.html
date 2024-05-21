@@ -1,0 +1,30 @@
+{% extends "layout.html" %} {% block title %} Homepage {% endblock %} {% block
+main %}
+<!-- Show some think -->
+<h1>HTML Geolocation</h1>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<!-- Worker part -->
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker()">Stop Worker</button>
+
+<p>
+    <strong>Note:</strong> Internet Explorer 9 and earlier versions do not
+    support Web Workers.
+</p>
+<gmp-map
+    center="10.79857349395752,106.69364166259766"
+    zoom="14"
+    map-id="DEMO_MAP_ID"
+>
+    <gmp-advanced-marker
+        position="10.79857349395752,106.69364166259766"
+        title="My location"
+    ></gmp-advanced-marker>
+</gmp-map>
+{% endblock %}
